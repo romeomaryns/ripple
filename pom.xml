@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.3.RELEASE</version>
+        <version>1.4.1.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -23,7 +23,8 @@
         <module>payment-service</module>
         <module>config-service</module>
         <module>discovery-service</module>
-   <!--     <module>online-store-web</module> -->
+        <module>hello-world</module>
+        <module>catalog-service</module>
         <module>edge-service</module>
         <module>shopping-cart-service</module>
         <module>hystrix-dashboard</module>
