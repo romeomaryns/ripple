@@ -111,8 +111,8 @@ shopping-cart-service:
   environment:
    - SPRING_PROFILES_ACTIVE=docker
    - DOCKER_IP=$DOCKER_IP
-online-store-web:
-  image: romeomaryns/online-store-web
+gateway:
+  image: romeomaryns/gateway
   ports:
    - 8787:8787
   links:
