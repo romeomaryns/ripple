@@ -1,10 +1,10 @@
 ---
 applications:
-- name: online-store-web
+- name: gateway
   memory: 1024MB
   instances: 1
-  host: online-store-web
-  path: target/online-store-web-0.0.1-SNAPSHOT.jar
+  host: gateway
+  path: target/gateway-0.0.1-SNAPSHOT.jar
   env:
     SPRING_PROFILES_ACTIVE: cloud
     DEBUG: "true"
