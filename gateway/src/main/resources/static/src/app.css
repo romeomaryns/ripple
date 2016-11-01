@@ -7,6 +7,13 @@
 .header {
   color: var(--mainColor);
 }
+html {
+  background: url(src/resources/img/light_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 top {
 }
