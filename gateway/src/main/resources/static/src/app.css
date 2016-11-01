@@ -9,26 +9,10 @@
 }
 
 top {
-  display:flex;
-  align-content: space-between;
 }
 
 middle {
-  display:flex;
-  align-content: space-between;
-
 }
 
 bottom {
-  display:flex;
-  align-content: space-between;
-}
-
-body {
-  color: var(--bodyColor);
-}
-
-a {
-  text-decoration: none;
-  color: var(--linkColor);
 }

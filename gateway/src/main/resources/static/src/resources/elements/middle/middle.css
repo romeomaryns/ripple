@@ -1,15 +1,7 @@
 
 sidebar {
- width: 20%;  /* Or whatever */
- height: 100%; /* Or whatever */
- margin: auto;  /* Magic! */
+
 }
 workspace {
-  width: 80%;
-  height:100%;
-  margin:auto;
-}
-.content{
-  display:flex;
-  align-content: space-between;
+
 }
