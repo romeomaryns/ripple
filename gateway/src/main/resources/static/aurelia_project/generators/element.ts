@@ -15,7 +15,8 @@ export default class ElementGenerator {
         this.project.elements.add(
           ProjectItem.text(`${fileName}.ts`, this.generateJSSource(className)),
           ProjectItem.text(`${fileName}.html`, this.generateHTMLSource(fileName,className)),
-          ProjectItem.text(`${fileName}.css`, `\n`)
+          ProjectItem.text(`${fileName}.css`, `\n`),
+          ProjectItem.text(`${fileName}.css.json`, `\n`),
         );
 
         return this.project.commitChanges()

@@ -1,6 +1,31 @@
 <template>
   <require from="./app.css"></require>
-  <top value="Header" class="pure-g"></top>
-  <middle value="Middle" class="pure-g"></middle>
-  <bottom value="Bottom" class="pure-g"></bottom>
+  <require from="materialize-css/css/materialize.css"></require>
+  <theming></theming>
+  <md-navbar>
+    
+    <ul class="hide-on-med-and-down right">
+      <li md-waves><a>About</a></li>
+      <li md-waves><a>Installation</a></li>
+      <li md-waves><a>Project Status</a></li>
+      <li md-waves><a md-dropdown="activates: dropdown1;" >Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li md-waves><a>
+      <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+        <label for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+      </a></li>
+    </ul>
+  </md-navbar>
+
+
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a>one</a></li>
+    <li><a>two</a></li>
+    <li class="divider"></li>
+    <li><a>three</a></li>
+  </ul>
 </template>
