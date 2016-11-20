@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
 # Remove existing containers
-docker-compose stop
-docker compose rm 
+docker-compose down
+docker-compose rm
 
 
 set -e
 
 # Build the project and docker images
+# mvn verify -DskipTests
+# Install for pushing to remote repository
 mvn clean install -DskipTests
-
 # Export the active docker machine IP
 export DOCKER_IP=$(docker-machine ip $(docker-machine active))
 
