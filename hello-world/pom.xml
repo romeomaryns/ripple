@@ -50,7 +50,7 @@
         </dependency>
     </dependencies>
 
-    <build>
+     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -62,15 +62,28 @@
                 <version>${docker.plugin.version}</version>
                 <executions>
                     <execution>
-                        <phase>install</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>build</goal>
+                        </goals>
+                     </execution>
+                     <execution>
+                         <id>2</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
+                     <forceTags>true</forceTags>
+                     <serverId>docker-hub</serverId>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <imageTags>
+                        <imageTag>${project.version}</imageTag>
+                        <imageTag>latest</imageTag>
+                     </imageTags>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -82,5 +95,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
